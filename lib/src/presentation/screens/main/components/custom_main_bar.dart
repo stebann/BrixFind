@@ -1,6 +1,7 @@
 import 'package:findhome/src/config/theme/app_colors.dart';
 import 'package:findhome/src/widgets/circular_button.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomMainBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomMainBar({super.key});
@@ -11,6 +12,7 @@ class CustomMainBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
       automaticallyImplyLeading: false,
       toolbarHeight: preferredSize.height,
       title: Row(
@@ -24,7 +26,7 @@ class CustomMainBar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               Text(
                 'Your Location',
-                style: TextStyle(
+                style: GoogleFonts.chakraPetch(
                   fontSize: 13,
                   color: Colors.grey.shade700,
                   fontWeight: FontWeight.w600,
@@ -33,7 +35,7 @@ class CustomMainBar extends StatelessWidget implements PreferredSizeWidget {
               SizedBox(height: 5),
               Text(
                 'New York, USA',
-                style: TextStyle(
+                style: GoogleFonts.chakraPetch(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: AppColors.textColor,

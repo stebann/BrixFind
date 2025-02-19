@@ -23,6 +23,7 @@ class CustomBottomNav extends ConsumerWidget {
     final profileIcon = Icon(Icons.person_outline, size: sizeIcon);
 
     return BottomNavigationBar(
+      backgroundColor: Colors.white,
       currentIndex: currentIndex,
       selectedItemColor: Colors.black,
       unselectedItemColor: Colors.grey.shade600,

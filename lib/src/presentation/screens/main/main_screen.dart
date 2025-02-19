@@ -22,6 +22,7 @@ class MainScreen extends ConsumerWidget {
     final currentIndex = ref.watch(navigationControllerProvider);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: const CustomMainBar(),
       drawer: const Drawer(),
       body: _screens[currentIndex],
