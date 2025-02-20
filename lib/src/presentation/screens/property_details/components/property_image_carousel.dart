@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 class PropertyImageCarousel extends StatefulWidget {
   final List<String> images;
 
-  const PropertyImageCarousel({
-    super.key,
-    required this.images
-  });
+  const PropertyImageCarousel({super.key, required this.images});
 
   @override
   State<PropertyImageCarousel> createState() => _PropertyImageCarouselState();
@@ -32,10 +29,7 @@ class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
             },
             itemCount: widget.images.length,
             itemBuilder: (context, index) {
-              return Image.asset(
-                widget.images[index],
-                fit: BoxFit.cover,
-              );
+              return Image.asset(widget.images[index], fit: BoxFit.cover);
             },
           ),
         ),
@@ -81,9 +75,10 @@ class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
                 margin: const EdgeInsets.symmetric(horizontal: 4),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: _currentPage == index
-                      ? Colors.white
-                      : Colors.white.withAlpha(128),
+                  color:
+                      _currentPage == index
+                          ? Colors.white
+                          : Colors.white.withAlpha(128),
                 ),
               ),
             ),
@@ -98,10 +93,7 @@ class _CircularButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onPressed;
 
-  const _CircularButton({
-    required this.icon,
-    required this.onPressed,
-  });
+  const _CircularButton({required this.icon, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
