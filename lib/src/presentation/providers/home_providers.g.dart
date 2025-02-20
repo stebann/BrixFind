@@ -25,7 +25,7 @@ final categoryTypesProvider = AutoDisposeProvider<List<CategoryModel>>.internal(
 // ignore: unused_element
 typedef CategoryTypesRef = AutoDisposeProviderRef<List<CategoryModel>>;
 String _$recommendedPropertiesHash() =>
-    r'ef188d00cd2329fbffeb12fcc864246f76e009e9';
+    r'a41ecdfedbc1162615031dbfc3524a815dcfdfaa';
 
 /// See also [recommendedProperties].
 @ProviderFor(recommendedProperties)
@@ -44,7 +44,7 @@ final recommendedPropertiesProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef RecommendedPropertiesRef = AutoDisposeProviderRef<List<PropertyModel>>;
-String _$nearbyPropertiesHash() => r'ab9d97c4fbab01e2d53ac0f98400e298a349b00c';
+String _$nearbyPropertiesHash() => r'e6829b2cf1e1156917aa4da434d1ce5e08243bc8';
 
 /// See also [nearbyProperties].
 @ProviderFor(nearbyProperties)
@@ -63,7 +63,7 @@ final nearbyPropertiesProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef NearbyPropertiesRef = AutoDisposeProviderRef<List<PropertyModel>>;
-String _$popularPropertiesHash() => r'c55a8244cbfe4461afe5ab70b37fa5c8b90ab441';
+String _$popularPropertiesHash() => r'3de97e55fe35a48224dd26ec42a2c70e87daeec1';
 
 /// See also [popularProperties].
 @ProviderFor(popularProperties)

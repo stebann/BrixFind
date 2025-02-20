@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class PropertyModel {
   final String imageUrl;
+  final List<String> images;
   final String title;
   final double rating;
   final String location;
@@ -12,6 +13,7 @@ class PropertyModel {
   final String category;
 
   const PropertyModel({
+    required this.images,
     required this.imageUrl,
     required this.title,
     required this.rating,

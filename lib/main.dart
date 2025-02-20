@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Find Home',
       debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter().router,
+      routerConfig: router,
     );
   }
 }

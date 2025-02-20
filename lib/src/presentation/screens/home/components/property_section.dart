@@ -1,7 +1,9 @@
 import 'package:findhome/src/config/helpers/currency_format.dart';
+import 'package:findhome/src/config/router/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:findhome/src/config/theme/app_colors.dart';
 import 'package:findhome/src/presentation/screens/home/models/property_model.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PropertySection extends StatelessWidget {
@@ -76,23 +78,31 @@ class _PropertyCardState extends State<PropertyCard> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 16),
-      width: 320,
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _PropertyImage(
-            property: widget.property,
-            isFavorite: _isFavorite,
-            onFavoritePressed: () => setState(() => _isFavorite = !_isFavorite),
+    return GestureDetector(
+      onTap:
+          () => context.pushNamed(
+            RouteNames.propertyDetails,
+            extra: widget.property,
           ),
-          _PropertyInfo(property: widget.property),
-        ],
+      child: Container(
+        margin: const EdgeInsets.only(right: 16),
+        width: 320,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey.shade300),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _PropertyImage(
+              property: widget.property,
+              isFavorite: _isFavorite,
+              onFavoritePressed:
+                  () => setState(() => _isFavorite = !_isFavorite),
+            ),
+            _PropertyInfo(property: widget.property),
+          ],
+        ),
       ),
     );
   }
@@ -262,7 +272,7 @@ class _PropertyInfo extends StatelessWidget {
   Widget _buildLocation() {
     return Row(
       children: [
-        const Icon(Icons.location_on, color: Colors.grey, size: 16),
+        const Icon(Icons.location_on, color: Colors.grey, size: 18),
         Expanded(
           child: Text(
             property.location,
@@ -284,7 +294,7 @@ class _PropertyInfo extends StatelessWidget {
       children: [
         Row(
           children: [
-            const Icon(Icons.bed, color: Colors.grey, size: 16),
+            const Icon(Icons.bed, color: Colors.grey, size: 18),
             const SizedBox(width: 4),
             Text(
               property.beds.toString(),
@@ -295,7 +305,7 @@ class _PropertyInfo extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 16),
-            const Icon(Icons.bathtub, color: Colors.grey, size: 16),
+            const Icon(Icons.bathtub, color: Colors.grey, size: 18),
             const SizedBox(width: 4),
             Text(
               property.baths.toString(),

@@ -62,6 +62,11 @@ List<CategoryModel> categoryTypes(Ref ref) {
 List<PropertyModel> recommendedProperties(Ref ref) {
   return [
     PropertyModel(
+      images: [
+        'assets/properties/foto-1-house.jpeg',
+        'assets/properties/foto-1-house.jpeg',
+        'assets/properties/foto-1-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-1-house.jpeg',
       title: 'Modern Villa House',
       rating: 4.5,
@@ -73,6 +78,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
       category: PropertyCategory.house.label,
     ),
     PropertyModel(
+      images: [
+        'assets/properties/foto-2-house.jpeg',
+        'assets/properties/foto-2-house.jpeg',
+        'assets/properties/foto-2-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-2-house.jpeg',
       title: 'Urban Living Space',
       rating: 4.8,
@@ -84,6 +94,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
       category: PropertyCategory.apartment.label,
     ),
     PropertyModel(
+      images: [
+        'assets/properties/foto-3-house.jpeg',
+        'assets/properties/foto-3-house.jpeg',
+        'assets/properties/foto-3-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-3-house.jpeg',
       title: 'Downtown Complex',
       rating: 4.9,
@@ -101,6 +116,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
 List<PropertyModel> nearbyProperties(Ref ref) {
   return [
     PropertyModel(
+      images: [
+        'assets/properties/foto-4-house.jpeg',
+        'assets/properties/foto-4-house.jpeg',
+        'assets/properties/foto-4-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-4-house.jpeg',
       title: 'Sky View Apartment',
       rating: 4.3,
@@ -112,6 +132,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
       category: PropertyCategory.apartment.label,
     ),
     PropertyModel(
+      images: [
+        'assets/properties/foto-5-house.jpeg',
+        'assets/properties/foto-5-house.jpeg',
+        'assets/properties/foto-5-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-5-house.jpeg',
       title: 'Family House',
       rating: 4.5,
@@ -123,6 +148,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
       category: PropertyCategory.house.label,
     ),
     PropertyModel(
+      images: [
+        'assets/properties/foto-6-house.jpeg',
+        'assets/properties/foto-6-house.jpeg',
+        'assets/properties/foto-6-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-6-house.jpeg',
       title: 'Industrial Space',
       rating: 4.8,
@@ -140,6 +170,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
 List<PropertyModel> popularProperties(Ref ref) {
   return [
     PropertyModel(
+      images: [
+        'assets/properties/foto-7-house.jpeg',
+        'assets/properties/foto-7-house.jpeg',
+        'assets/properties/foto-7-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-7-house.jpeg',
       title: 'Modern Townhouse',
       rating: 4.9,
@@ -151,6 +186,11 @@ List<PropertyModel> popularProperties(Ref ref) {
       category: PropertyCategory.townhouse.label,
     ),
     PropertyModel(
+      images: [
+        'assets/properties/foto-8-house.jpeg',
+        'assets/properties/foto-8-house.jpeg',
+        'assets/properties/foto-8-house.jpeg',
+      ],
       imageUrl: 'assets/properties/foto-8-house.jpeg',
       title: 'Development Land',
       rating: 4.8,

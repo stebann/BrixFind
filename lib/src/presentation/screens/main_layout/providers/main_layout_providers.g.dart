@@ -1,28 +1,29 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'navigation_provider.dart';
+part of 'main_layout_providers.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$navigationControllerHash() =>
-    r'34500486e4320706ee0125beef9823c4d73b5fbe';
+String _$navigationItemsHash() => r'583eb22eecaeaff40d24f6c94ad7cbe8c0a17e22';
 
-/// See also [NavigationController].
-@ProviderFor(NavigationController)
-final navigationControllerProvider =
-    AutoDisposeNotifierProvider<NavigationController, int>.internal(
-      NavigationController.new,
-      name: r'navigationControllerProvider',
+/// See also [navigationItems].
+@ProviderFor(navigationItems)
+final navigationItemsProvider =
+    AutoDisposeProvider<List<NavigationItemModel>>.internal(
+      navigationItems,
+      name: r'navigationItemsProvider',
       debugGetCreateSourceHash:
           const bool.fromEnvironment('dart.vm.product')
               ? null
-              : _$navigationControllerHash,
+              : _$navigationItemsHash,
       dependencies: null,
       allTransitiveDependencies: null,
     );
 
-typedef _$NavigationController = AutoDisposeNotifier<int>;
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef NavigationItemsRef = AutoDisposeProviderRef<List<NavigationItemModel>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
