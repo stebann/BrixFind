@@ -8,27 +8,27 @@ part 'main_layout_providers.g.dart';
 @riverpod
 List<NavigationItemModel> navigationItems(Ref ref) {
   return [
-    NavigationItemModel(
+    const NavigationItemModel(
       label: 'Home',
       icon: Icons.home_outlined,
       activeIcon: Icons.home_filled,
     ),
-    NavigationItemModel(
+    const NavigationItemModel(
       label: 'Explore',
       icon: Icons.explore_outlined,
       activeIcon: Icons.explore,
     ),
-    NavigationItemModel(
+    const NavigationItemModel(
       label: 'Wishlist',
       icon: Icons.favorite_outline,
       activeIcon: Icons.favorite,
     ),
-    NavigationItemModel(
+    const NavigationItemModel(
       label: 'Message',
       icon: Icons.message_outlined,
       activeIcon: Icons.message,
     ),
-    NavigationItemModel(
+    const NavigationItemModel(
       label: 'Profile',
       icon: Icons.person_outline,
       activeIcon: Icons.person,

@@ -98,15 +98,11 @@ class _CircularButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,
         boxShadow: [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 8,
-            offset: const Offset(0, 2),
-          ),
+          BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 2)),
         ],
       ),
       child: IconButton(

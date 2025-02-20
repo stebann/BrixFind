@@ -12,16 +12,16 @@ class CustomSearchField extends StatelessWidget {
       cursorColor: Colors.black54,
       decoration: InputDecoration(
         filled: true,
-        fillColor: Color.fromARGB(255, 238, 238, 238),
+        fillColor: const Color.fromARGB(255, 238, 238, 238),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide.none,
         ),
-        prefixIcon: Icon(Icons.search, size: 25, color: Colors.black54),
+        prefixIcon: const Icon(Icons.search, size: 25, color: Colors.black54),
         suffixIcon: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
               child: VerticalDivider(
                 color: Colors.grey,
@@ -35,8 +35,8 @@ class CustomSearchField extends StatelessWidget {
               child: InkWell(
                 onTap: onTapFilter,
                 borderRadius: BorderRadius.circular(50),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: FaIcon(
                     FontAwesomeIcons.sliders,
                     size: 20,
@@ -48,9 +48,9 @@ class CustomSearchField extends StatelessWidget {
             const SizedBox(width: 15),
           ],
         ),
-        contentPadding: EdgeInsets.all(16),
+        contentPadding: const EdgeInsets.all(16),
         isDense: true,
-        hintStyle: TextStyle(fontSize: 16, color: Colors.black54),
+        hintStyle: const TextStyle(fontSize: 16, color: Colors.black54),
         hintText: 'Search property...',
       ),
     );

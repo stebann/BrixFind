@@ -192,14 +192,14 @@ class _FavoriteButton extends StatelessWidget {
       child: Container(
         height: 32,
         width: 32,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: const Color(0x1A000000),
+              color: Color(0x1A000000),
               blurRadius: 4,
-              offset: const Offset(0, 2),
+              offset: Offset(0, 2),
             ),
           ],
         ),

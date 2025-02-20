@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:findhome/src/presentation/screens/home/models/property_model.dart';
 
-import 'components/property_image_carousel';
+import 'components/property_image_carousel.dart';
 
 class PropertyDetailsScreen extends StatelessWidget {
   final PropertyModel property;

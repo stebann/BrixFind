@@ -26,7 +26,7 @@ class HomeScreen extends ConsumerWidget {
 
           CategoryCarousel(categories: categories),
 
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
 
           PropertySection(
             title: 'Recommended Property',
@@ -34,7 +34,7 @@ class HomeScreen extends ConsumerWidget {
             onSeeAll: () {},
           ),
 
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
 
           PropertySection(
             title: 'Nearby You',
@@ -42,7 +42,7 @@ class HomeScreen extends ConsumerWidget {
             onSeeAll: () {},
           ),
 
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
 
           PropertySection(
             title: 'Most Popular',

@@ -32,7 +32,7 @@ class CustomMainBar extends StatelessWidget implements PreferredSizeWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               Text(
                 'New York, USA',
                 style: GoogleFonts.chakraPetch(
