@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:findhome/src/presentation/screens/home/models/category_model.dart';
-import 'package:findhome/src/presentation/screens/home/models/property_model.dart';
+import 'package:findhome/src/models/category_model.dart';
+import 'package:findhome/src/models/property_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'home_providers.g.dart';
+part 'data_providers.g.dart';
 
 enum PropertyCategory {
   house(
@@ -76,6 +76,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
       price: 540000,
       categoryIcon: PropertyCategory.house.icon,
       category: PropertyCategory.house.label,
+      additionalInfo: {
+        'Property Type': 'Modern Villa',
+        'Stories': '2',
+        'Air Conditioning': 'Central',
+      },
     ),
     PropertyModel(
       images: [
@@ -92,6 +97,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
       price: 320000,
       categoryIcon: PropertyCategory.apartment.icon,
       category: PropertyCategory.apartment.label,
+      additionalInfo: {
+        'Property Type': 'Apartment',
+        'Stories': '15',
+        'Air Conditioning': 'Split Units',
+      },
     ),
     PropertyModel(
       images: [
@@ -108,6 +118,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
       price: 840000,
       categoryIcon: PropertyCategory.townhouse.icon,
       category: PropertyCategory.townhouse.label,
+      additionalInfo: {
+        'Property Type': 'Townhouse Complex',
+        'Stories': '3',
+        'Air Conditioning': 'Central',
+      },
     ),
   ];
 }
@@ -130,6 +145,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
       price: 420000,
       categoryIcon: PropertyCategory.apartment.icon,
       category: PropertyCategory.apartment.label,
+      additionalInfo: {
+        'Property Type': 'High-rise Apartment',
+        'Stories': '25',
+        'Air Conditioning': 'Central',
+      },
     ),
     PropertyModel(
       images: [
@@ -146,6 +166,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
       price: 680000,
       categoryIcon: PropertyCategory.house.icon,
       category: PropertyCategory.house.label,
+      additionalInfo: {
+        'Property Type': 'Single Family',
+        'Stories': '2',
+        'Air Conditioning': 'Heat Pump',
+      },
     ),
     PropertyModel(
       images: [
@@ -162,6 +187,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
       price: 920000,
       categoryIcon: PropertyCategory.warehouse.icon,
       category: PropertyCategory.warehouse.label,
+      additionalInfo: {
+        'Property Type': 'Industrial',
+        'Stories': '1',
+        'Air Conditioning': 'Industrial HVAC',
+      },
     ),
   ];
 }
@@ -184,6 +214,11 @@ List<PropertyModel> popularProperties(Ref ref) {
       price: 1250000,
       categoryIcon: PropertyCategory.townhouse.icon,
       category: PropertyCategory.townhouse.label,
+      additionalInfo: {
+        'Property Type': 'Luxury Townhouse',
+        'Stories': '3',
+        'Air Conditioning': 'Multi-zone',
+      },
     ),
     PropertyModel(
       images: [

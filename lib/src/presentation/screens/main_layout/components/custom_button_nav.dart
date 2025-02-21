@@ -14,27 +14,34 @@ class CustomBottomNav extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final navigationItems = ref.watch(navigationItemsProvider);
 
-    return NavigationBar(
-      selectedIndex: navigationShell.currentIndex,
-      indicatorColor: const Color.fromRGBO(0, 0, 0, 0.1),
-      labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
-      onDestinationSelected: navigationShell.goBranch,
-      labelTextStyle: WidgetStateProperty.all(
-        GoogleFonts.chakraPetch(
-          fontSize: 12,
-          fontWeight: FontWeight.w600,
-          color: AppColors.textColor,
+    return Container(
+      decoration: const BoxDecoration(
+        border: Border(
+          top: BorderSide(color: Color.fromRGBO(0, 0, 0, 0.1), width: 1),
         ),
       ),
-      backgroundColor: Colors.white,
-      destinations:
-          navigationItems.map((item) {
-            return NavigationDestination(
-              icon: Icon(item.icon, size: 25),
-              selectedIcon: Icon(item.activeIcon, size: 25),
-              label: item.label,
-            );
-          }).toList(),
+      child: NavigationBar(
+        selectedIndex: navigationShell.currentIndex,
+        indicatorColor: const Color.fromRGBO(0, 0, 0, 0.1),
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+        onDestinationSelected: navigationShell.goBranch,
+        labelTextStyle: WidgetStateProperty.all(
+          GoogleFonts.chakraPetch(
+            fontSize: 12,
+            fontWeight: FontWeight.w600,
+            color: AppColors.textColor,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        destinations:
+            navigationItems.map((item) {
+              return NavigationDestination(
+                icon: Icon(item.icon, size: 25),
+                selectedIcon: Icon(item.activeIcon, size: 25),
+                label: item.label,
+              );
+            }).toList(),
+      ),
     );
   }
 }

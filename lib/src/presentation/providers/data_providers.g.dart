@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_providers.dart';
+part of 'data_providers.dart';
 
 // **************************************************************************
 // RiverpodGenerator
@@ -25,7 +25,7 @@ final categoryTypesProvider = AutoDisposeProvider<List<CategoryModel>>.internal(
 // ignore: unused_element
 typedef CategoryTypesRef = AutoDisposeProviderRef<List<CategoryModel>>;
 String _$recommendedPropertiesHash() =>
-    r'a41ecdfedbc1162615031dbfc3524a815dcfdfaa';
+    r'203c160cf8e27505b30852223d261289883bd87a';
 
 /// See also [recommendedProperties].
 @ProviderFor(recommendedProperties)
@@ -44,7 +44,7 @@ final recommendedPropertiesProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef RecommendedPropertiesRef = AutoDisposeProviderRef<List<PropertyModel>>;
-String _$nearbyPropertiesHash() => r'e6829b2cf1e1156917aa4da434d1ce5e08243bc8';
+String _$nearbyPropertiesHash() => r'8ae73dabcb394fdda5dde46f3ece4eec11fb451b';
 
 /// See also [nearbyProperties].
 @ProviderFor(nearbyProperties)
@@ -63,7 +63,7 @@ final nearbyPropertiesProvider =
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef NearbyPropertiesRef = AutoDisposeProviderRef<List<PropertyModel>>;
-String _$popularPropertiesHash() => r'3de97e55fe35a48224dd26ec42a2c70e87daeec1';
+String _$popularPropertiesHash() => r'27a4308e5d7bf8c8bb9edad69750736d9e569fac';
 
 /// See also [popularProperties].
 @ProviderFor(popularProperties)

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:findhome/src/presentation/providers/data_providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:findhome/src/presentation/providers/home_providers.dart';
 
 import 'components/category_carousel.dart';
 import 'components/custom_search_field.dart';

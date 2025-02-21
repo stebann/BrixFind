@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
-class PropertyImageCarousel extends StatefulWidget {
+class PropertyImageCarousel extends HookWidget {
   final List<String> images;
 
   const PropertyImageCarousel({super.key, required this.images});
 
   @override
-  State<PropertyImageCarousel> createState() => _PropertyImageCarouselState();
-}
-
-class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
-  final PageController _pageController = PageController();
-  int _currentPage = 0;
-
-  @override
   Widget build(BuildContext context) {
+    final pageController = usePageController();
+    final currentPage = useState(0);
+    final isFavorite = useState(false);
+
     return Stack(
       children: [
         // Image Carousel
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.45,
           child: PageView.builder(
-            controller: _pageController,
-            onPageChanged: (int page) {
-              setState(() {
-                _currentPage = page;
-              });
-            },
-            itemCount: widget.images.length,
+            controller: pageController,
+            onPageChanged: (page) => currentPage.value = page,
+            itemCount: images.length,
             itemBuilder: (context, index) {
-              return Image.asset(widget.images[index], fit: BoxFit.cover);
+              return Image.asset(images[index], fit: BoxFit.cover);
             },
           ),
         ),
@@ -43,16 +36,22 @@ class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _CircularButton(
-                icon: Icons.arrow_back,
+                icon: const Icon(Icons.arrow_back),
                 onPressed: () => Navigator.pop(context),
               ),
               Row(
                 children: [
-                  _CircularButton(icon: Icons.share, onPressed: () {}),
+                  _CircularButton(
+                    icon: const Icon(Icons.share),
+                    onPressed: () {},
+                  ),
                   const SizedBox(width: 8),
                   _CircularButton(
-                    icon: Icons.favorite_border,
-                    onPressed: () {},
+                    icon:
+                        isFavorite.value
+                            ? const Icon(Icons.favorite, color: Colors.red)
+                            : const Icon(Icons.favorite_border),
+                    onPressed: () => isFavorite.value = !isFavorite.value,
                   ),
                 ],
               ),
@@ -68,7 +67,7 @@ class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
-              widget.images.length,
+              images.length,
               (index) => Container(
                 width: 8,
                 height: 8,
@@ -76,7 +75,7 @@ class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color:
-                      _currentPage == index
+                      currentPage.value == index
                           ? Colors.white
                           : Colors.white.withAlpha(128),
                 ),
@@ -90,26 +89,29 @@ class _PropertyImageCarouselState extends State<PropertyImageCarousel> {
 }
 
 class _CircularButton extends StatelessWidget {
-  final IconData icon;
+  final Icon icon;
   final VoidCallback onPressed;
 
   const _CircularButton({required this.icon, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(color: Colors.black12, blurRadius: 8, offset: Offset(0, 2)),
-        ],
-      ),
-      child: IconButton(
-        icon: Icon(icon),
-        onPressed: onPressed,
-        color: Colors.black87,
-        iconSize: 20,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 8,
+              offset: Offset(0, 2),
+            ),
+          ],
+        ),
+        padding: const EdgeInsets.all(12),
+        child: Icon(icon.icon, color: icon.color, size: 20),
       ),
     );
   }

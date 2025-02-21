@@ -1,6 +1,6 @@
+import 'package:findhome/src/models/category_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../models/category_model.dart';
 
 class CategoryCarousel extends StatelessWidget {
   final List<CategoryModel> categories;

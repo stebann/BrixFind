@@ -11,6 +11,7 @@ class PropertyModel {
   final double price;
   final IconData categoryIcon;
   final String category;
+  final Map<String, String> additionalInfo;
 
   const PropertyModel({
     required this.images,
@@ -23,5 +24,6 @@ class PropertyModel {
     required this.price,
     required this.categoryIcon,
     required this.category,
+    this.additionalInfo = const {},
   });
 }

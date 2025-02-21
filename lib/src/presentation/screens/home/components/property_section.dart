@@ -2,7 +2,8 @@ import 'package:findhome/src/config/helpers/currency_format.dart';
 import 'package:findhome/src/config/router/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:findhome/src/config/theme/app_colors.dart';
-import 'package:findhome/src/presentation/screens/home/models/property_model.dart';
+import 'package:findhome/src/models/property_model.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -66,24 +67,17 @@ class PropertySection extends StatelessWidget {
   }
 }
 
-class PropertyCard extends StatefulWidget {
+class PropertyCard extends HookWidget {
   final PropertyModel property;
-  const PropertyCard({super.key, required this.property});
-  @override
-  State<PropertyCard> createState() => _PropertyCardState();
-}
 
-class _PropertyCardState extends State<PropertyCard> {
-  bool _isFavorite = false;
+  const PropertyCard({super.key, required this.property});
 
   @override
   Widget build(BuildContext context) {
+    final isFavorite = useState(false);
     return GestureDetector(
       onTap:
-          () => context.pushNamed(
-            RouteNames.propertyDetails,
-            extra: widget.property,
-          ),
+          () => context.pushNamed(RouteNames.propertyDetails, extra: property),
       child: Container(
         margin: const EdgeInsets.only(right: 16),
         width: 320,
@@ -95,12 +89,11 @@ class _PropertyCardState extends State<PropertyCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _PropertyImage(
-              property: widget.property,
-              isFavorite: _isFavorite,
-              onFavoritePressed:
-                  () => setState(() => _isFavorite = !_isFavorite),
+              property: property,
+              isFavorite: isFavorite.value,
+              onFavoritePressed: () => isFavorite.value = !isFavorite.value,
             ),
-            _PropertyInfo(property: widget.property),
+            _PropertyInfo(property: property),
           ],
         ),
       ),
@@ -154,10 +147,10 @@ class _CategoryBadge extends StatelessWidget {
       top: 12,
       left: 12,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
           children: [
