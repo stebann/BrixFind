@@ -13,36 +13,31 @@ class CategoryRaiting extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Positioned(
-          top: 12,
-          left: 12,
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 217, 237, 242),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  property.categoryIcon,
-                  size: 12,
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 217, 237, 242),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            children: [
+              Icon(
+                property.categoryIcon,
+                size: 12,
+                color: const Color(0xFF31A6A0),
+              ),
+              const SizedBox(width: 6),
+              Text(
+                property.category,
+                style: GoogleFonts.chakraPetch(
+                  fontSize: 12,
                   color: const Color(0xFF31A6A0),
+                  fontWeight: FontWeight.w700,
                 ),
-                const SizedBox(width: 6),
-                Text(
-                  property.category,
-                  style: GoogleFonts.chakraPetch(
-                    fontSize: 12,
-                    color: const Color(0xFF31A6A0),
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-
         Row(
           children: [
             Icon(Icons.star, color: Colors.yellow.shade700, size: 20),

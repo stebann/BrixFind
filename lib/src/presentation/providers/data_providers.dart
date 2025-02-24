@@ -63,12 +63,12 @@ List<PropertyModel> recommendedProperties(Ref ref) {
   return [
     PropertyModel(
       images: [
-        'assets/properties/foto-1-house.jpeg',
-        'assets/properties/foto-1-house.jpeg',
-        'assets/properties/foto-1-house.jpeg',
+        'assets/properties/foto-1-house.png',
+        'assets/properties/foto-1-house.png',
+        'assets/properties/foto-1-house.png',
       ],
-      imageUrl: 'assets/properties/foto-1-house.jpeg',
-      title: 'Modern Villa House',
+      imageUrl: 'assets/properties/foto-1-house.png',
+      title: 'Modern House',
       rating: 4.5,
       location: 'Beverly Hills, CA',
       beds: 4,
@@ -84,11 +84,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
     ),
     PropertyModel(
       images: [
-        'assets/properties/foto-2-house.jpeg',
-        'assets/properties/foto-2-house.jpeg',
-        'assets/properties/foto-2-house.jpeg',
+        'assets/properties/foto-2-house.png',
+        'assets/properties/foto-2-house.png',
+        'assets/properties/foto-2-house.png',
       ],
-      imageUrl: 'assets/properties/foto-2-house.jpeg',
+      imageUrl: 'assets/properties/foto-2-house.png',
       title: 'Urban Living Space',
       rating: 4.8,
       location: 'Miami Beach, FL',
@@ -105,11 +105,11 @@ List<PropertyModel> recommendedProperties(Ref ref) {
     ),
     PropertyModel(
       images: [
-        'assets/properties/foto-3-house.jpeg',
-        'assets/properties/foto-3-house.jpeg',
-        'assets/properties/foto-3-house.jpeg',
+        'assets/properties/foto-3-house.png',
+        'assets/properties/foto-3-house.png',
+        'assets/properties/foto-3-house.png',
       ],
-      imageUrl: 'assets/properties/foto-3-house.jpeg',
+      imageUrl: 'assets/properties/foto-3-house.png',
       title: 'Downtown Complex',
       rating: 4.9,
       location: 'Palm Springs, CA',
@@ -132,11 +132,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
   return [
     PropertyModel(
       images: [
-        'assets/properties/foto-4-house.jpeg',
-        'assets/properties/foto-4-house.jpeg',
-        'assets/properties/foto-4-house.jpeg',
+        'assets/properties/foto-4-house.png',
+        'assets/properties/foto-4-house.png',
+        'assets/properties/foto-4-house.png',
       ],
-      imageUrl: 'assets/properties/foto-4-house.jpeg',
+      imageUrl: 'assets/properties/foto-4-house.png',
       title: 'Sky View Apartment',
       rating: 4.3,
       location: 'Downtown LA, CA',
@@ -153,11 +153,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
     ),
     PropertyModel(
       images: [
-        'assets/properties/foto-5-house.jpeg',
-        'assets/properties/foto-5-house.jpeg',
-        'assets/properties/foto-5-house.jpeg',
+        'assets/properties/foto-5-house.png',
+        'assets/properties/foto-5-house.png',
+        'assets/properties/foto-5-house.png',
       ],
-      imageUrl: 'assets/properties/foto-5-house.jpeg',
+      imageUrl: 'assets/properties/foto-5-house.png',
       title: 'Family House',
       rating: 4.5,
       location: 'Santa Monica, CA',
@@ -174,11 +174,11 @@ List<PropertyModel> nearbyProperties(Ref ref) {
     ),
     PropertyModel(
       images: [
-        'assets/properties/foto-6-house.jpeg',
-        'assets/properties/foto-6-house.jpeg',
-        'assets/properties/foto-6-house.jpeg',
+        'assets/properties/foto-6-house.png',
+        'assets/properties/foto-6-house.png',
+        'assets/properties/foto-6-house.png',
       ],
-      imageUrl: 'assets/properties/foto-6-house.jpeg',
+      imageUrl: 'assets/properties/foto-6-house.png',
       title: 'Industrial Space',
       rating: 4.8,
       location: 'Malibu, CA',
@@ -201,11 +201,11 @@ List<PropertyModel> popularProperties(Ref ref) {
   return [
     PropertyModel(
       images: [
-        'assets/properties/foto-7-house.jpeg',
-        'assets/properties/foto-7-house.jpeg',
-        'assets/properties/foto-7-house.jpeg',
+        'assets/properties/foto-7-house.png',
+        'assets/properties/foto-7-house.png',
+        'assets/properties/foto-7-house.png',
       ],
-      imageUrl: 'assets/properties/foto-7-house.jpeg',
+      imageUrl: 'assets/properties/foto-7-house.png',
       title: 'Modern Townhouse',
       rating: 4.9,
       location: 'Manhattan, NY',
@@ -222,11 +222,11 @@ List<PropertyModel> popularProperties(Ref ref) {
     ),
     PropertyModel(
       images: [
-        'assets/properties/foto-8-house.jpeg',
-        'assets/properties/foto-8-house.jpeg',
-        'assets/properties/foto-8-house.jpeg',
+        'assets/properties/foto-8-house.png',
+        'assets/properties/foto-8-house.png',
+        'assets/properties/foto-8-house.png',
       ],
-      imageUrl: 'assets/properties/foto-8-house.jpeg',
+      imageUrl: 'assets/properties/foto-8-house.png',
       title: 'Development Land',
       rating: 4.8,
       location: 'Chicago, IL',
