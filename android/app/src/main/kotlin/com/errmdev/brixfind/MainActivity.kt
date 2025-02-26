@@ -1,4 +1,4 @@
-package com.example.findhome
+package com.errmdev.brixfind
 
 import io.flutter.embedding.android.FlutterActivity
 
