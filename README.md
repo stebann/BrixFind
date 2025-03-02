@@ -13,6 +13,8 @@ BrixFind es una aplicación inmobiliaria moderna desarrollada con Flutter que fa
   <img src="assets/github-screenshots/galery4.png" width="200" />
   <img src="assets/github-screenshots/galery5.png" width="200" />
   <img src="assets/github-screenshots/galery6.png" width="200" />
+  <img src="assets/github-screenshots/galery7.png" width="200" />
+  <img src="assets/github-screenshots/galery8.png" width="200" />
 </p>
 
 ## ✨ Características
@@ -77,7 +79,3 @@ lib/
 - **Esteban Ramirez**
   - GitHub: [@stebann](https://github.com/stebann)
   - LinkedIn: [estebanrramirezm](https://linkedin.com/in/estebanrramirezm)
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
