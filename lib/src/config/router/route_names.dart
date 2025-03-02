@@ -6,8 +6,14 @@ class RouteNames {
   static const String explore = 'main.explore';
   static const String wishlist = 'main.wishlist';
   static const String messages = 'main.messages';
-  static const String profile = 'main.profile';
 
   // Property Routes
   static const String propertyDetails = 'property.details';
+
+  // Settings Routes
+  static const String propertySettings = 'settings.property';
+  static const String userSettings = 'settings.user';
+
+  // About Routes
+  static const String about = 'about';
 }

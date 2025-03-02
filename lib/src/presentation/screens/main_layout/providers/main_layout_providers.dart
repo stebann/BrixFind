@@ -23,15 +23,5 @@ List<NavigationItemModel> navigationItems(Ref ref) {
       icon: Icons.favorite_outline,
       activeIcon: Icons.favorite,
     ),
-    const NavigationItemModel(
-      label: 'Message',
-      icon: Icons.message_outlined,
-      activeIcon: Icons.message,
-    ),
-    const NavigationItemModel(
-      label: 'Profile',
-      icon: Icons.person_outline,
-      activeIcon: Icons.person,
-    ),
   ];
 }

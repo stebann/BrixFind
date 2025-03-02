@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'components/custom_button_nav.dart';
+import 'components/custom_drawer.dart';
 import 'components/custom_main_bar.dart';
 
 class MainLayout extends StatelessWidget {
@@ -15,7 +16,7 @@ class MainLayout extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const CustomMainBar(),
-      drawer: const Drawer(),
+      drawer: const CustomDrawer(),
       body: navigationShell,
       bottomNavigationBar: CustomBottomNav(navigationShell: navigationShell),
     );

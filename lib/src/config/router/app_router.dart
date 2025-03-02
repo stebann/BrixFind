@@ -1,8 +1,8 @@
-import 'package:findhome/src/models/property_model.dart';
+import 'route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:findhome/src/models/property_model.dart';
 import 'package:findhome/src/presentation/screens/screens.dart';
-import 'route_names.dart';
 
 final GlobalKey<NavigatorState> _rootNavigationKey = GlobalKey<NavigatorState>(
   debugLabel: 'root',
@@ -44,24 +44,6 @@ final GoRouter router = GoRouter(
             ),
           ],
         ),
-        StatefulShellBranch(
-          routes: [
-            GoRoute(
-              path: '/messages',
-              name: RouteNames.messages,
-              builder: (context, state) => const MessageScreen(),
-            ),
-          ],
-        ),
-        StatefulShellBranch(
-          routes: [
-            GoRoute(
-              path: '/profile',
-              name: RouteNames.profile,
-              builder: (context, state) => const ProfileScreen(),
-            ),
-          ],
-        ),
       ],
     ),
 
@@ -71,6 +53,27 @@ final GoRouter router = GoRouter(
       builder: (context, state) {
         final property = state.extra as PropertyModel;
         return PropertyDetailsScreen(property: property);
+      },
+    ),
+    GoRoute(
+      path: '/settings-property',
+      name: RouteNames.propertySettings,
+      builder: (context, state) {
+        return const SettingScreen();
+      },
+    ),
+    GoRoute(
+      path: '/settings-user',
+      name: RouteNames.userSettings,
+      builder: (context, state) {
+        return const ProfileScreen();
+      },
+    ),
+    GoRoute(
+      path: '/about',
+      name: RouteNames.about,
+      builder: (context, state) {
+        return const AboutScreen();
       },
     ),
   ],
