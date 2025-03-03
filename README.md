@@ -70,7 +70,7 @@ lib/
 │   ├── config/         # Configuración de la app
 │   ├── models/         # Modelos de datos
 │   ├── presentation/   # Componentes de UI
-│   ├── providers/      # Gestión de estado
+│       ├── providers/      # Gestión de estado
 │   └── utils/         # Utilidades y helpers
 ```
 
