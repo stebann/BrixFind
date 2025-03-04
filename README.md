@@ -17,7 +17,7 @@ BrixFind es una aplicación inmobiliaria moderna desarrollada con Flutter que fa
   <img src="assets/github-screenshots/galery8.png" width="200" />
 </p>
 
-## 🛠️ Tecnología Utilizadas
+## 🛠️ Tecnologías Utilizadas
 - Flutter
 - Dart
 
