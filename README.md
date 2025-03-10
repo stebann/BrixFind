@@ -4,6 +4,9 @@ BrixFind es una aplicación inmobiliaria moderna desarrollada con Flutter que fa
 
 > ⚠️ **Nota**: Este proyecto es un prototipo/mockup diseñado con fines demostrativos y educativos.
 
+## 🎨 Inspiración de Diseño
+[Omo Real Estate Mobile App - Dribbble](https://dribbble.com/shots/21826025-Omo-Real-Estate-Mobile-App)
+
 ## 📱 Capturas de Pantalla
 
 <p float="left">
